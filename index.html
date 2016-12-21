@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Interview Question</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+
+
+<!--<body onLoad="$('#slide-right-popup').modal('show');">-->
+<body onLoad="setTimeout(function() { $('#slide-right-popup').modal('show');}, 1000);">
+
+<!--Navigation bar-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">YOURSTORE.COM</a>
+ </nav>
+
+<!--body-->
+
+<div class="container">
+    <br></br>
+    <br></br>
+  <h2 class="text-center">PAGE CONTENT</h2>
+</div>
+
+
+
+
+  <!-- Modal -->
+
+ <div class="modal fade" id="slide-right-popup" data-keyboard="false" data-backdrop="false" >
+    <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <p class="text-center">Are you looking for a <strong>'White Dress'</strong>?</p>
+
+         <div class="row">
+
+                 <div class="col-xs-2 col-md-2"></div>
+
+                <div class="col-xs-3 col-md-3"><img src="img/boy.png"/>For Boys <button type="button" class="btn btn-primary btn-xs">Show More</button></div>
+
+                 <div class="col-xs-1 col-md-1"></div>
+
+                <div class="col-xs-3 col-md-3"><img src="img/girl.png"/>For Girls <button type="button" class="btn btn-primary btn-xs">Show More</button></div>
+        </div>
+    </div><!-- /.modal-body -->
+</div><!-- /.modal -->
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

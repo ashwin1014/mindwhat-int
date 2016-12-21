@@ -1,0 +1,39 @@
+
+
+.modal.fade.in .modal-body {
+    bottom: 0;
+    right:0;
+    animation: slide-right;
+
+}
+.modal-body {
+    position: absolute;
+    right: -250px;
+    bottom: 0;
+
+    animation: slide-right;
+    padding: 15px;
+    width: 400px;
+    height: 300px;
+    background-color: #e5e5e5;
+
+
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+ 
+}
+.close {
+    margin-top: -20px;
+    text-shadow: 0 1px 0 #ffffff;
+}
+.popup-button {
+    margin-left: 140px;
+    margin-top: 77px;
+    font-weight: bold;
+}
+
+
+
+
