@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<!--Add underscore.js-->
+
+<script type="text/javascript" src="js/underscore.js"></script>
+<script type="text/javascript" src="js/try.js"></script>
 
 </head>
 
@@ -20,10 +24,10 @@
 <body onLoad="setTimeout(function() { $('#slide-right-popup').modal('show');}, 1000);">
 
 <!--Navigation bar-->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="background-color:#cccccc;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">YOURSTORE.COM</a>
+      <a class="navbar-brand" href="#" style="color:black;"><p style="font-size:17.5px;">YOURSTORE.COM</p></a>
  </nav>
 
 <!--body-->
@@ -31,7 +35,8 @@
 <div class="container">
     <br></br>
     <br></br>
-  <h2 class="text-center">PAGE CONTENT</h2>
+    <br></br>
+  <h2 class="text-center" style="font-size: 17px; color:#878282"><strong>PAGE CONTENT</strong></h2>
 </div>
 
 
@@ -39,20 +44,82 @@
 
   <!-- Modal -->
 
- <div class="modal fade" id="slide-right-popup" data-keyboard="false" data-backdrop="false" >
-    <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <p class="text-center">Are you looking for a <strong>'White Dress'</strong>?</p>
+ <div class="modal fade" id="slide-right-popup" id="responsive" data-keyboard="false" data-backdrop="false" class="panel" >
+    <div class="modal-body" style="bottom:10px; scroll-behavior: smooth;">
+        <button type="button" class="close" data-dismiss="modal" style="margin-top: 0px"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+
+        <br><p class="text-center">Are you looking for <strong>'Something White'</strong>?</p></br>
 
          <div class="row">
 
-                 <div class="col-xs-2 col-md-2"></div>
 
-                <div class="col-xs-3 col-md-3"><img src="img/boy.png"/>For Boys <button type="button" class="btn btn-primary btn-xs">Show More</button></div>
+                <div class="col-xs-2 col-md-2"></div>
 
-                 <div class="col-xs-1 col-md-1"></div>
+                <div class="col-xs-4 col-md-4" style="background-color:#cccccc;">
+                <img id="target" class="img-responsive img-thumbnail" src="img/h1.jpg" style="width: 80px; height: 100px; column-gap: 100px;"/>For Boys <input type="button" class="btn btn-default btn-xs" onclick="nextPic()" value="Show More"/>  
 
-                <div class="col-xs-3 col-md-3"><img src="img/girl.png"/>For Girls <button type="button" class="btn btn-primary btn-xs">Show More</button></div>
+                <script type="text/javascript">
+                  var target = document.getElementById('target');
+                  var counter = 0;
+                  var myPictures = [
+                      "img/b1.jpg",
+                      "img/b2.jpg",
+                      "img/g1.jpg",
+                      "img/g2.jpg",
+                      "img/g3.jpg",
+                      "img/r1.jpg",
+                      "img/r2.jpg",
+                      "img/r3.jpg",
+                      "img/h1.jpg",
+                      "img/h2.jpg",
+                      "img/h3.jpg"
+                                   ];
+
+                function nextPic() {
+                    counter += 1;
+                    if (counter > myPictures.length -1) {
+                      counter = 0;
+                    }
+                    target.src = myPictures[counter];
+                  }                
+
+                </script>           
+                
+                </div>
+
+                <div class="col-xs-1 col-md-1"></div>
+             <!--girls button-->
+                <div class="col-xs-4 col-md-4" style="background-color:#cccccc;">
+                <img id="target2" class="img-responsive img-thumbnail" src="img/r1.jpg" style="width: 80px; height: 100px; column-gap: 100px;"/>For Girls <input type="button" class="btn btn-default btn-xs" onclick="nextPic2()" value="Show More"/>   
+
+                  <script type="text/javascript">
+                  var target2 = document.getElementById('target2');
+                  var counter2 = 0;
+                  var myPictures2 = [
+                      "img/b1.jpg",
+                      "img/b2.jpg",
+                      "img/h2.jpg",
+                      "img/g1.jpg",
+                      "img/g2.jpg",
+                      "img/r1.jpg",
+                      "img/r2.jpg",
+                      "img/r3.jpg",
+                      "img/g3.jpg",
+                      "img/h1.jpg",
+                      "img/h3.jpg"
+                                   ];
+
+                function nextPic2() {
+                    counter2 += 1;
+                    if (counter2 > myPictures2.length -1) {
+                      counter2 = 0;
+                    }
+                    target2.src = myPictures2[counter2];
+                  }                
+
+                </script>         
+ 
+                </div>
         </div>
     </div><!-- /.modal-body -->
 </div><!-- /.modal -->
