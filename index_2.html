@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Interview Question</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+
+<!--<body onLoad="$('#slide-right-popup').modal('show');">-->
+<body onLoad="setTimeout(function() { $('#slide-right-popup').modal('show');}, 1000);">
+
+<!--Navigation bar-->
+<nav class="navbar navbar-default" style="background-color:#cccccc;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:black;"><p style="font-size:17.5px;">YOURSTORE.COM</p></a>
+ </nav>
+
+<!--body-->
+
+<div class="container">
+    <br></br>
+    <br></br>
+    <br></br>
+  <h2 class="text-center" style="font-size: 17px; color:#878282"><strong>PAGE CONTENT</strong></h2>
+</div>
+
+
+
+
+  <!-- Modal -->
+
+ 
+ <div class="modal fade" id="slide-right-popup" id="responsive" data-keyboard="false" data-backdrop="false" class="panel" >
+    <div class="modal-body" style="bottom:10px; scroll-behavior: smooth;">
+        <button type="button" class="close" data-dismiss="modal" style="margin-top: 0px"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+
+        <br><p class="text-center">Are you looking for <strong>'Something White'</strong>?</p></br>
+
+         <script type="text/template" id="img-template">
+ 
+  <% _.each(target, function(row) { %>  
+                 
+         <div class="row">
+
+
+            <div class="col-xs-2 col-md-2"></div>  <!--space-->
+             <!--boys button-->
+             
+                <div class="col-xs-4 col-md-4" style="background-color:#cccccc;">
+                <img id="target" class="img-responsive img-thumbnail" src="<%= row.imageURL %>" style="width: 80px; height: 100px; column-gap: 100px;"/><p>For Boys</p>        
+                
+                </div> <!--end boy button-->
+
+                <div class="col-xs-1 col-md-1"></div> <!--space-->
+             
+             <!--girls button-->
+             
+                <div class="col-xs-4 col-md-4" style="background-color:#cccccc;">
+                <img id="target2" class="img-responsive img-thumbnail" src="<%= row.imageURL %>" style="width: 80px; height: 100px; column-gap: 100px;"/><p>For Girls</p>
+ 
+                </div> <!--end girl button-->
+             
+        </div> <!--end class row-->
+
+<% }); %>
+
+</script> 
+     
+    </div><!-- /.modal-body -->
+</div><!-- /.modal -->
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/jquery.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--Add underscore.js-->
+<script src="js/underscore.js"></script>
+
+<script src="js/custom.js"></script>
+</body>
+</html>
